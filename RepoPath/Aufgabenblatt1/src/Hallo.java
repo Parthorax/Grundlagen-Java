@@ -31,7 +31,20 @@ public class Hallo {
 	        System.out.println ("Hallo Welt "+ b);
 	      b=b+1;  }
 	    }
+	    
+	    //Abbuch nach der 5. Ausgabe
+	    
+	    for (int f = 0; f < 10; f ++){
+	    	System.out.println("Hallo Welt" + f);
+	    	
+	    	if ( f == 4){
+	    		break;
+	    	}
+	    
+	    }
+	    
+	    }
 	      
-	}
-
+	
 }
+
