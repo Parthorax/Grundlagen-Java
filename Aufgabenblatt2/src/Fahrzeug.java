@@ -8,9 +8,9 @@ class Fahrzeug { 		//geschweifte Klammer öffnet die Klasse)
 		farbe = new String ("rot");
 	}
 
-	Fahrzeug ( int a, String b) {	// dieser Konstrukter wird ausgeführt in der ein int und ein 
-		Tank = a;		// String erwartet wird. Tank wird mit dem int wert gefüllt
-		farbe = new String ( b );   // hier handelt es sich um ein neues Objekt darum new
+	Fahrzeug ( int Tank, String farbe) {	// dieser Konstrukter wird ausgeführt in der ein int und ein 
+		this.Tank = Tank;					// String erwartet wird. Tank wird mit dem int wert gefüllt
+		this.farbe = new String ( farbe );   // hier handelt es sich um ein neues Objekt darum new
 		}
 	double fahren (int km) {
 		double verbrauch = 0.9 * (double) km;
