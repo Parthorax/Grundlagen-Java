@@ -12,4 +12,9 @@ class Fahrzeug { 		//geschweifte Klammer öffnet die Klasse)
 		Tank = a;		// String erwartet wird. Tank wird mit dem int wert gefüllt
 		farbe = new String ( b );   // hier handelt es sich um ein neues Objekt darum new
 		}
+	double fahren (int km) {
+		double verbrauch = 0.9 * (double) km;
+		Tank = Tank - (int) verbrauch;
+		return verbrauch;
+	}
 }
