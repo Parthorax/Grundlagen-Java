@@ -39,7 +39,7 @@ class Pkw extends Fahrzeug{
 	}
 	// Aufgabe 4
 	double fahren (int km, int fahrerNr){
-		double verbrauch;
+		double verbrauch = 0.0;
 		switch(fahrerNr){
 		case 1:
 			verbrauch = (double) km * 6.0 / 100.0;
@@ -62,7 +62,8 @@ class Pkw extends Fahrzeug{
 			 tank = tank - (int) verbrauch;
 			 return verbrauch;
 		default:
-			verbrauch = 0.0;
+			verbrauch = (double) km * 12.0 / 100.0;
+			 tank = tank - (int) verbrauch;
 			return verbrauch;
 	
 			
