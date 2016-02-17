@@ -51,7 +51,7 @@ public class Prog {
 						
 		   // Aufgabe 5	
 			
-			pFahrzeug k = new pFahrzeug (50);
+			pFahrzeug k = new pFahrzeug (-50);
 				k.setTank(100);		//fehler erzeugen
 				System.out.println("kFahr  " + k.getTank());
 						
