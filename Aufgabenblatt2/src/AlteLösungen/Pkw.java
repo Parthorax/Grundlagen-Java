@@ -1,5 +1,5 @@
-
- class Pkw extends Fahrzeug{
+package AlteLösungen;
+class Pkw extends Fahrzeug{
 	 
 	 	 	 
 	 Pkw () {				//Hiermit kann man in einem anderen Programm über Pkw () ergebnisse aus Fahrzeug () bekommen

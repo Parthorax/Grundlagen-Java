@@ -1,3 +1,4 @@
+package AlteLösungen;
 
 class pFahrzeug {
 	private int tank;

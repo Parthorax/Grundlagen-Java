@@ -1,3 +1,4 @@
+package AlteLösungen;
 
 class Fahrzeug { 		//geschweifte Klammer öffnet die Klasse)
 	int tank;
