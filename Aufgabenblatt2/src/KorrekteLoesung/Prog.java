@@ -25,8 +25,8 @@ public class Prog {
 		int [] vmaxListe = {120,150,180,200,210};
 		int [] tankListe = {40, 50, 60, 70, 80};
 		
-		String farbListe [] = new String[5];
-			farbListe[0] = new String("rot");
+		String farbListe [] = new String[5];      //So wie eine ganze Zahl default ein Integer ist und eine gleitkomma Zahl ein double
+			farbListe[0] = new String("rot");	  // ist alles in "" ein string. Man kann auch z = "rot" schreiben
 	 		farbListe[1] = new String("blau");
 	 		farbListe[2] = new String("grün");
 	 		farbListe[3] = new String("gelb");
@@ -39,6 +39,7 @@ public class Prog {
 			 System.out.print(vw[i].getPs()+" ");
 			 System.out.print(vw[i].getVmax()+" ");
 			 System.out.println(vw[i].getFarbe());
+			 System.out.println( "Seriennummer " + vw[i].SN); //Auch für Aufgabe 5
 		 }
 			 
 		//Aufgabe 4
@@ -65,7 +66,35 @@ public class Prog {
 		int kw = mazda.psZuKw(90);
 		System.out.println("90 Ps = "+kw+" kw");
 			 
-			 
+		//Tag 3 Aufgabe 2
+		Pkw b3 = new Pkw(50, 90, 100, "rot");
+		double d3 = b3.fahren(250);
+		System.out.println("Verbrauch Aufgabe 2 = "+d3+" der tank "+b3.getTank());
+		
+		// Tag 3 Aufgabee 3
+		
+		Pkw p3 = new Pkw();
+		double l3 = p3.fahren(250, 5);  //hier geben wir 2 parameter über, daher weiß er das wir die case methode wollen
+		System.out.println("Verbrauch Aufgabe 3 = "+l3+" der tank "+b3.getTank());
+		
+		
+		//Tag 3 Aufgabe 4
+		Pkw neu = new Pkw(); //Test erstellung
+		System.out.println("So viele Autos wurden erstellt: "+Pkw.zaehler);
+		
+		// Aufgabe 6
+		
+		String s1 = "Hallo Welt";
+		String s2 = "Hallo";
+		boolean kk = s1.equals(s2);
+		System.out.println(kk);
+		
+		//teilen
+		
+		String s3 = s1.substring(0,5);
+		System.out.println(s3);
+	
+		
 			 
 	}
 

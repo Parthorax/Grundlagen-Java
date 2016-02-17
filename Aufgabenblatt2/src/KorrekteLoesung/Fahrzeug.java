@@ -2,10 +2,10 @@ package KorrekteLoesung;
 
  class Fahrzeug {
 
-	 private int ps;
-	 private int vmax;
-	 private int tank;
-	 private String farbe;
+	 protected int ps;				//Gängige art der Programmierung um Zugriff auf Variablen einzuschränken
+	 protected int vmax;				//fordert "this" um sich innerhalb dieses Programms auf die Variable zu beziehen
+	 protected int tank;				//fordert get um von außerhalb diese Variable aufzurufen
+	 protected String farbe;			//fordert set um den Wert von außen zu ändern
 	 
 	 Fahrzeug ( ){
 		 ps = 0;
@@ -32,7 +32,7 @@ package KorrekteLoesung;
 			this.ps = ps; 
 		 }
 	 }
-	 int getPs(){
+	 int getPs(){   // int weil er einen Wert übergeben bekommt und leere klammern weil er keine parameter definiert
 		 if (ps < 0 || ps > 300){
 			 System.out.println( "Nicht über 300 oder Negative Zahlen");
 		 }
