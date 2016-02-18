@@ -18,16 +18,17 @@ class MeinFenster extends Frame{ 		//Mittels Vererbung. Ich will nun einen Butto
 		this.add( lab );
 		this.setLayout( new GridLayout(2,1));  //Hier Sagen wir das wir ein Raster mit 2 Feldern wollen oben und unten. 1,2 wäre links rechts, 1,1 wäre ein feld, 2,2 wären 4 Felder
 		this.setVisible(true);   				//Hier sagen wir das es Sichtbar sein soll
-		but.addActionListener(new MeineAktion()); //Hier sage ich ihm das ich eine Aktion auf Button will
-		
+		but.addActionListener(new MeineAktion()); //Hier sage ich ihm das ich eine Aktion auf Button will. Es ist ein Konstruktor Aufruf
+												  // es wird also ein objekt erzeugt aus der inneren Klasse.
+		this.addWindowListener(new ProgEnde());   //Hier Implementiere ich meine methode aus Prog.java zum schließen
 	}
 	
 	//Hier kommt jetzt die innere Klasse mit Bezug zum grafischen Element in dieser Klasse selbst. der Button
 	//Mit ActionListener implementieren (wie beim Erben) die fähigkeit Main und Maus zu verbinden und den Mausklick zu beobachten
 	class MeineAktion implements ActionListener {		//Ich muss noch java.awt.event.* oben schreiben
 		
-		public void actionPerformed( ActionEvent e){
-			String s = e.getActionCommand();			//hier benutze ich das Ereignis Kommando. Er empfängt jetzt das Klicken auf den Knopf
+		public void actionPerformed( ActionEvent o){	//Wir erben hier auch die Eigenschaften
+			String s = o.getActionCommand();			//hier benutze ich das Ereignis Kommando. Er empfängt jetzt das Klicken auf den Knopf
 			if (s.equals("OK")){						// Er überbrüft ob ich OK geklickt habe (Casesensitive!)
 				lab.setText("geklickt");				// Und macht dann etwas
 			}
