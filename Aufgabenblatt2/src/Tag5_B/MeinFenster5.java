@@ -19,14 +19,14 @@ public class MeinFenster5 extends JFrame{
 		super();
 		mz = new MeineMenuLeiste();
 		this.setJMenuBar( mz );
-		but = new JButton ("OK");
+		but = new JButton ("Ich mache NICHTS");
 		
 		
 		//Textfeld einabuen und Tastatur Überwachen
 		JSplitPane teilen = new JSplitPane(JSplitPane.VERTICAL_SPLIT); //Ich baue jetzt ein zwei geteiltes Feld.
 		txt = new JTextField();										// Ein teil ist ein Textfeld mit Scrollfunktion
 		txt.addKeyListener(new TasteFarbe());		
-		lab = new JLabel("Ihr Text");								//der 2. Teil ist ein Label (Überschrift) die sich nach enter verändert		
+		lab = new JLabel("Wer das liest ist DOOF");								//der 2. Teil ist ein Label (Überschrift) die sich nach enter verändert		
 		lab.addMouseListener( new MeineMaus());						//Maus überwachen:
 		teilen.add(lab, JSplitPane.TOP);							//Hier sagt er, dass im oberen Teil das Label reinkommt
 		teilen.add(txt, JSplitPane.BOTTOM);						//Hier sagt er, dass das untere Mit dem Textfeld belegt wird 	
