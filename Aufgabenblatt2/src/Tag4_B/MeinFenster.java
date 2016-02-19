@@ -17,7 +17,7 @@ class MeinFenster extends JFrame{ 		//Mittels Vererbung. Ich will nun einen Butt
 		lab2= new JLabel("L2");
 		
 		this.setSize(300, 300);			//Damit setze ich die Dimension
-		this.getContentPane().setLayout(new GridLayout(1,2));       //Wir bauen nun wieder ein Raster aber mit neuen Funktionen von Javax.swing.*
+		this.getContentPane().setLayout(new GridLayout(1,3));       //Wir bauen nun wieder ein Raster aber mit neuen Funktionen von Javax.swing.*
 		
 		JPanel p1 = new JPanel (new GridLayout(2,2));   //Hier Teilen wir die Linke seite des Frames nochmal in 4 Teile
 		p1.add( but );p1.add( lab);					//Wir erstellen ein Button und ein Label im neuen Panel
@@ -29,6 +29,15 @@ class MeinFenster extends JFrame{ 		//Mittels Vererbung. Ich will nun einen Butt
 		JScrollPane roll = new JScrollPane(txtA);	//Hier gleich eine Scrollfunktion und übertrage gleich txtA mit.
 		p2.add( roll );
 		this.getContentPane().add(p2);				//Hier addiere ich das ganze zu unserem Inhalt im Feld
+		
+		//Ingo's Code:
+		JSplitPane teilen = new JSplitPane(JSplitPane.VERTICAL_SPLIT); //Ingo hat oben eine Dritte Spalte eingebaut. Diese hat er nun getrennt
+		JTextArea txtb = new JTextArea();							//in 2 Teilen. Ein teil ist ein Textfeld mit Scrollfunktion
+		JScrollPane roll1  = new JScrollPane(txtb);					//der zweite Teil ist eine eifache Textzeile
+		JTextField txt = new JTextField();
+		teilen.add(txt, JSplitPane.TOP);							//Hier sagt er, dass im oberen Teil das einfache Textfeld reinkommt
+		teilen.add(roll1, JSplitPane.BOTTOM);						//Hier sagt er, dass das untere sein Textfeld mit Scrollfunktion sein soll 	
+		this.getContentPane().add(teilen);
 			
 		this.setVisible(true);   				//Hier sagen wir das es Sichtbar sein soll
 		but.addActionListener(new MeineAktion()); //Hier sage ich ihm das ich eine Aktion auf Button will. Es ist ein Konstruktor Aufruf
