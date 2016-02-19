@@ -7,7 +7,7 @@ class AufgabeFenster extends Frame{ 		//Mittels Vererbung. Ich will nun einen Bu
 	Label [] lab;		//Diese Datentypen ähnlich einem Int (aber keiner) soll zur Klasse "Mein Fenster gehören"
 	int zaehler = 1;	//Zähler für die Aufgabe eingefügt. Zählt unten die klicks
 	
-	AufgabeFenster(){		//Konstruktor heißt wie meine Klasse		
+	AufgabeFenster(){		//Konstruktor heißt wie meine Klasse und wird verwendet, um ein Objekt der Klasse zu erzeugen.		
 		super( "Mein 2. Window ");   //Real Erben tun wir nur mit Konstruktor aufruf von "Frame"
 		but = new Button [2];
 			but[0] = new Button ("OK");
@@ -32,7 +32,8 @@ class AufgabeFenster extends Frame{ 		//Mittels Vererbung. Ich will nun einen Bu
 		//Aufgabe 3
 		but[0].addActionListener(new MeineAktion2()); //Hier sage ich ihm das ich eine Aktion auf Button will. Es ist ein Konstruktor Aufruf
 		but[1].addActionListener(new MeineAktion2()); // es wird also ein objekt erzeugt aus der inneren Klasse.
-		this.addWindowListener(new ProgEnde2());   //Hier Implementiere ich meine methode aus Prog.java zum schließen
+		this.addWindowListener(new ProgEnde2());   //Hier Implementiere ich meine methode aus Prog.java zum schließen. 
+												   // Methoden werden verwendet, um Daten zu manipulieren.	
 		//Aufgabe 6 & 7
 		this.setLocation(740, 450);				//Verändert die Position des Fensters beim ersten aufruf und stellt ihn in die mitte.
 		
