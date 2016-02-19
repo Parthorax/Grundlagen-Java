@@ -7,14 +7,14 @@ package KorrekteLoesung;
 	 protected int tank;				//fordert get um von außerhalb diese Variable aufzurufen
 	 protected String farbe;			//fordert set um den Wert von außen zu ändern
 	 
-	 Fahrzeug ( ){
+	 Fahrzeug ( ){		//Konstruktor. Heißt wie die Klasse selbst und instanziert meine Variablen
 		 ps = 0;
 		 vmax = 0;
 		 tank = 0;
 		 farbe = new String ();
 	 }
 	 
-	 Fahrzeug (int ps, int vmax, int tank, String farbe){
+	 Fahrzeug (int ps, int vmax, int tank, String farbe){		//Konstruktor mit Parameterübergabe. 
 		 this.ps = ps;
 		 this.vmax = vmax;
 		 this.tank = tank;

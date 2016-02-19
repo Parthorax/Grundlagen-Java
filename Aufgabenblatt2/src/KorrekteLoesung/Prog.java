@@ -32,7 +32,7 @@ public class Prog {
 	 		farbListe[1] = new String("blau");
 	 		farbListe[2] = new String("grün");
 	 		farbListe[3] = new String("gelb");
-	 		farbListe[4] = new String("neger");
+	 		farbListe[4] = new String("BLACK");
 	 		
 	 	Pkw [] vw = new Pkw[5];
 		 for(int i = 0; i < vw.length; i++){

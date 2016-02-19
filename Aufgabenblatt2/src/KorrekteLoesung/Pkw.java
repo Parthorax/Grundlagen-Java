@@ -1,14 +1,14 @@
 package KorrekteLoesung;
 
 class Pkw extends Fahrzeug{
-	final int SN; //wir möchten das die Serie konstant bleibt und sich nicht verändern kann.
+	final int SN; //wir möchten das die Seriennummer konstant bleibt und sich nicht verändern kann.
 	static int zaehler = 1;
 	int tueren = 4;
 	
 	
 	Pkw(){
 		super ();		//Ruft den Elternmethode aus Fahrzeug.java auf
-		SN = Pkw.zaehler++;
+		SN = Pkw.zaehler++;		//"Zählt" jeden aufruf und verpasst damit jedem erstellten PKW eine SN zu
 	}
 	Pkw ( int ps, int vmax, int tank, String farbe){
 		super(ps, vmax, tank, farbe);		// Muss mit dem Elternteil passen, auch Reihenfolge
