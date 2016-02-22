@@ -16,11 +16,31 @@ public class MeinFenster5 extends JFrame{
 		mz = new MeineMenuLeiste();
 		this.setJMenuBar( mz );
 		but = new JButton ("OK");
+		
+		but.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+		
 		JPanel p2 = new JPanel (new GridLayout(1,1)); // Eins eins damit es zwangsweise nur 1 feld ist. Hat den Vorteil das alles weggedrängt wird was zuviel wäre
 		JTextArea txtA = new JTextArea();			//Ich erstelle mir ein Textfeld
+		//Unicode Zeichen
+		txtA.append("kyrillisch\n");				//erzeugt im Textfeld alle kyrillischen/arabischen/grie. Buchstaben anhand der Forschleife
+		for( int i= 1040; i<1103;i++){
+			txtA.append(" "+((char)i));
+		}
+		txtA.append("\narabisch\n");
+		for( int i= 1649; i<1747;i++){
+			txtA.append(" "+((char)i));
+		}
+		txtA.append("\ngriechisch\n");
+		for( int i= 913; i<974;i++){
+			txtA.append(" "+((char)i));
+		}
+		
 		JScrollPane roll = new JScrollPane(txtA);	//Hier gleich eine Scrollfunktion und übertrage gleich txtA mit.
 		p2.add( roll );
 		this.getContentPane().add(p2);				//Hier addiere ich das ganze zu unserem Inhalt im Feld
+		
+		//Rahmen:
+		p2.setBorder(BorderFactory.createLineBorder(Color.RED));  //Hiermit mache ich einen roten Rahmen um meinen oberen Panel
 		
 		this.setSize(900, 300);
 		this.getContentPane().setLayout(new GridLayout(2,1));
