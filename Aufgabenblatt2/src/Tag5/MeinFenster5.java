@@ -78,8 +78,8 @@ public class MeinFenster5 extends JFrame{
 	}//Ende der Inneren Klasse MeineMenuLeiste
 	
 	//innere Klasse MeineAktion
-	class MeineAktion implements ActionListener {
-		@Override //überschreiben
+	class MeineAktion implements ActionListener {					//Vorteile von Listener ist, man kann mehrere Eigenschaften erben
+		@Override //überschreiben									nachteil ist, das man jede Methode überschreiben muss
 		public void actionPerformed (ActionEvent z){
 			String s = z.getActionCommand();
 			

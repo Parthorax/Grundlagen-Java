@@ -22,7 +22,7 @@ public class MeinFenster5 extends JFrame{
 		but = new JButton ("Ich mache NICHTS");
 		
 		
-		//Textfeld einabuen und Tastatur Überwachen
+		//Textfeld einbauen und Tastatur Überwachen
 		JSplitPane teilen = new JSplitPane(JSplitPane.VERTICAL_SPLIT); //Ich baue jetzt ein zwei geteiltes Feld.
 		txt = new JTextField();										// Ein teil ist ein Textfeld mit Scrollfunktion
 		txt.addKeyListener(new TasteFarbe());		
